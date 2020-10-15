@@ -1,0 +1,18 @@
+h3 {
+    font-size: 40px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+fieldset {
+    color: whitesmoke;
+}
+
+.tombol {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
