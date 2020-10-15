@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    color: wheat;
+}
+
+fieldset {
+    position: relative;
+    top: 70px;
+    background-color: brown;
+}
+
+.profil {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: relative;
+    left: -10px;
+}
+
+.kontak {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+}
+
+table {
+    position: relative;
+    top: 200PX;
+}
+
+.wa {
+    color: wheat;
+}
+
+.ig {
+    color: wheat;
+}
