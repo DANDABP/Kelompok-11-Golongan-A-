@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +22,18 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
 <body id="page-top">
+
+  <?php
+    if(!isset($_SESSION['email'])){
+      ?>
+      <script>
+        window.location.href = "login.php";
+      </script>
+      <?php
+    }
+  ?>
+
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -204,10 +217,9 @@
                   Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Logout
-                </a>
+                <form action="logout-proses.php" method="post">
+                  <button type="submit">Logout</button>
+                </form>
               </div>
             </li>
 
@@ -225,6 +237,18 @@
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
+          <?php
+            if(isset($_GET['pesan'])){
+              $pesan = $_GET['pesan'];
+              if($pesan == "berhasil"){
+                ?>
+                <div class="alert alert-sucess">
+                  <strong>Success!</strong>Anda berhasil login.
+                </div>
+                <?php
+              }
+            }
+          ?>
           <!-- Content Row -->
           <div class="row">
 
