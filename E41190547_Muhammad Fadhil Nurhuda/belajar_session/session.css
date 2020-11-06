@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  margin-left: 180px;
+}
+
+.container {
+  padding-right: 350px;
+  padding-left: 350px;
+}
