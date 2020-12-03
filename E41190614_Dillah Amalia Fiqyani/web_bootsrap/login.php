@@ -42,18 +42,24 @@
                   <?php
                     if(isset($_GET['pesan'])){
                         $pesan = $_GET['pesan'];
-                        if ($pesan == "gagal") {
+                        if ($pesan == "emailsalah") {
                             ?>
                             <div class ="alert alert-danger">
-                                <strong>Danger!</strong> Anda Gagal Login. Coba cek Email atau password Anda.
+                                <strong>Danger!</strong> Anda Gagal Login. Coba cek Email Anda.
                         </div>
                         <?php
+                        }else if ($pesan=="passwordsalah"){
+                          ?>
+                          <div class="alert alert-danger">
+                          <strong>Danger!</strong> Anda Gagal Login. Coba cek Password Anda.
+                          </div>
+                          <?php
                         }
-                    }
-                    ?>
+                      }
+                      ?>
                   <form class="user" method="post" action="login_process.php">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email" required>
+                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="username" required>
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password" required>
