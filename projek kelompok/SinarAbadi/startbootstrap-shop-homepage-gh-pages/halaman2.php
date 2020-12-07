@@ -20,11 +20,14 @@
 </head>
 
 <body>
+  <?php
+    include 'koneksi.php';
+  ?>
 
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
 
@@ -40,7 +43,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="index.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -51,7 +54,7 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pembayaran.html">Pembayaran</a>
+            <a class="nav-link" href="pembayaran.php">Pembayaran</a>
           </li>
         </ul>
       </div>
@@ -67,9 +70,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.html" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.html" class="list-group-item">Lampu</a>
-          <a href="kabel.html" class="list-group-item">Kabel</a>
+          <a href="index.php" class="list-group-item">Semua Kategori</a>
+          <a href="lampu.php" class="list-group-item">Lampu</a>
+          <a href="kabel.php" class="list-group-item">Kabel</a>
         </div>
 
       </div>
@@ -107,14 +110,18 @@
       <!-- Produk -->
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 10");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="produk kabel.html"><img class="card-img-top" src="LAN.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="produk kabel.html">Kabel UTP LAN Cat 6</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 120.000</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -124,13 +131,17 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 11");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="phlips 14,5W.jpeg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Philips 14,5W LED</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 46.500</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -140,13 +151,17 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 12");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="philips 9W.jfif" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Philips 9W LED WIFI</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 108.000</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -156,13 +171,17 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 13");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="hdmi.jfif" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Kabel HDMI</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 35.000</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -172,13 +191,17 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 14");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="produk lampu.html"><img class="card-img-top" src="philips 6W.jfif" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="produk lampu.html">Philips 6W LED</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 28.500</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -188,45 +211,17 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 15");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="vga.jpg" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Kabel VGA</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 28.500</h5>
-                <font color="red">STOK HABIS</font>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="produk speaker.html"><img class="card-img-top" src="speaker1.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="produk speaker.html">Portable Bluetooth Speaker</a>
-                </h4>
-                <h5>Rp 285.000</h5>
-                <font color="red">STOK HABIS</font>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="speaker2.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Wireless Bluetooth Speaker System</a>
-                </h4>
-                <h5>Rp 210.000</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -236,13 +231,57 @@
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 16");
+              $data = mysqli_fetch_array($query);
+            ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="saklar.jfif" alt=""></a>
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Saklar Engkel</a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
-                <h5>Rp 15.000</h5>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
+                <font color="green">STOK TERSEDIA</font>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 17");
+              $data = mysqli_fetch_array($query);
+            ?>
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#"><?php echo $data['nama']; ?></a>
+                </h4>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
+                <font color="green">STOK TERSEDIA</font>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <?php
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 18");
+              $data = mysqli_fetch_array($query);
+            ?>
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="#"><?php echo $data['nama']; ?></a>
+                </h4>
+                <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
               </div>
               <div class="card-footer">
@@ -256,11 +295,11 @@
         <!-- Halaman -->
         <div class="center">
           <ul class="pagination">
-            <li><a href="#">«</a></li>
-            <li><a class="active" href="index.html">1</a></li>
-            <li><a href="halaman2.html">2</a></li>
-            <li><a href="halaman3.html">3</a></li>
-            <li><a href="halaman2.html">»</a></li>
+            <li><a href="index.php">«</a></li>
+            <li><a href="index.php">1</a></li>
+            <li><a class="active" href="halaman2.php">2</a></li>
+            <li><a href="halaman3.php">3</a></li>
+            <li><a href="halaman3.php">»</a></li>
           </ul>
         </div>
 
