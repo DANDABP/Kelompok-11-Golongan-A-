@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])) {
+    header("location:admin.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,17 +30,28 @@
 
 <body>
 
-    <form>
+    <form action="login-proses.php" method="POST">
         <div class="container mt-5 p-5 border border-dark rounded">
+            <?php
+            if (isset($_GET['pesan'])) {
+                $pesan = $_GET['pesan'];
+                if ($pesan == "gagal") {
+            ?>
+                    <div class="alert alert-danger">Anda gagal login silahkan masukkan usernamae dan password dengan benar</div>
+            <?php
+                }
+            }
+
+            ?>
             <div class="card-body ">
                 <div class="d-flex flex-row">
                     <div class="col-lg-5 p-5">
                         <h2>Login</h2>
                         <div class="form-group mt-5 mx-4">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">
+                            <input type="text" class="form-control" name="username" placeholder="username">
                         </div>
                         <div class="form-group mb-3 mx-4">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-primary center-block">Submit</button>
                     </div>
