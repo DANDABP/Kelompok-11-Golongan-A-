@@ -11,21 +11,39 @@ body {
   Tombol Pencarian
  */
 .search {
+<<<<<<< HEAD
   padding:5px 11px;
   background:rgb(255, 255, 255);
-  border:0px solid #ff0000;
+  border:3px solid #ffffff;
 }
 .button {
   position:relative;
-  padding:3px 10px;
-  left:1px;
-  border:2px solid #53bd84;
-  background-color:#53bd84;
+  padding:5px 10px;
+  left:-5px;
+  border:3px solid #ffffff;
+  background-color:#dc3545;
   color:#ffffff;
 }
 .button:hover  {
-  background-color:#fafafa;
-  color:#207cca;
+  background-color:#f14657;
+  color:#ffffff;
+=======
+  padding: 5px 11px;
+  background: rgb(255, 255, 255);
+  border: 0px solid #ff0000;
+}
+.button {
+  position: relative;
+  padding: 3px 10px;
+  left: 1px;
+  border: 2px solid #53bd84;
+  background-color: #53bd84;
+  color: #ffffff;
+}
+.button:hover {
+  background-color: #fafafa;
+  color: #207cca;
+>>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90
 }
 
 /*
@@ -35,20 +53,47 @@ ul.pagination {
   display: inline-block;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   }
-  ul.pagination li {display: inline;}
-  ul.pagination li a {
+
+ul.pagination li {display: inline;}
+
+=======
+}
+ul.pagination li {
+  display: inline;
+}
+>>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90
+ul.pagination li a {
   color: black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
   border: 1px solid #ddd;
+<<<<<<< HEAD
   }
-  ul.pagination li a.active {
-  background-color: #4CAF50;
+
+ul.pagination li a.active {
+  background-color: #dc3545;
   color: white;
-  border: 1px solid #4CAF50;
+  border: 1px solid #dc3545;
   }
-  ul.pagination li a:hover:not(.active) {background-color: #ddd;}
-  div.center {text-align: center;}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+div.center {text-align: center;}
+=======
+}
+ul.pagination li a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+ul.pagination li a:hover:not(.active) {
+  background-color: #ddd;
+}
+div.center {
+  text-align: center;
+}
+>>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90
