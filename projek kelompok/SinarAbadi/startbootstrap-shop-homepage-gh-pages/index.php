@@ -27,14 +27,10 @@
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-      <a class="navbar-brand" href="index.html">
-        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
-=======
       <a class="navbar-brand" href="index.php">
-        <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
-        Sinar Abadi</a>
+        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
+        Sinar Abadi
+      </a>
 
   <!--Tombol Pencarian-->
         <form>
@@ -100,13 +96,13 @@
             </div>
 
             <div class="carousel-item">
-              <a href="pembayaran.html" class="site-btn">
+              <a href="pembayaran.php" class="site-btn">
               <img class="d-block img-fluid" src="img/Navbar2.jpg" alt="Second slide">
               </a>
             </div>
 
             <div class="carousel-item">
-              <a href="pembayaran.html" class="site-btn">
+              <a href="pembayaran.php" class="site-btn">
               <img class="d-block img-fluid" src="img/Navbar3.jpg" alt="Third slide">
               </a>
             </div>
@@ -133,11 +129,9 @@
             ?>
 
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="produk kabel.html"><img class="card-img-top" src="img/LAN.jpg" alt=""></a>
-=======
+              <a href="produk kabel.html"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="produk kabel.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="produk kabel.php"><?php echo $data['nama']; ?></a>
@@ -157,11 +151,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/phlips 14,5W.jpeg" alt=""></a>
-=======
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -181,11 +175,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/philips 9W.jfif" alt=""></a>
-=======
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -205,11 +199,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/hdmi.jfif" alt=""></a>
-=======
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -229,11 +223,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="produk lampu.html"><img class="card-img-top" src="img/philips 6W.jfif" alt=""></a>
-=======
+
+              <a href="produk lampu.html"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -253,11 +247,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/vga.jpg" alt=""></a>
-=======
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -276,12 +269,10 @@
               $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 7");
               $data = mysqli_fetch_array($query);
             ?>
+
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="produk speaker.html"><img class="card-img-top" src="img/speaker1.jpg" alt=""></a>
-=======
+              <a href="produk speaker.html"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -301,11 +292,8 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/speaker2.jpg" alt=""></a>
-=======
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -324,12 +312,10 @@
               $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 9");
               $data = mysqli_fetch_array($query);
             ?>
+
             <div class="card h-100">
-<<<<<<< HEAD:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.html
-              <a href="#"><img class="card-img-top" src="img/saklar.jfif" alt=""></a>
-=======
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
->>>>>>> f8da14cc60f963aff74fca66e08458f99efa8b90:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/index.php
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
