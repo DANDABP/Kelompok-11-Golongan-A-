@@ -4,84 +4,61 @@ if (isset($_SESSION['username'])) {
     header("location:admin.php");
     exit;
 }
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sinar Abadi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <link rel="icon" type="image/png" href="logo 2.jpg">
-    <title>Sinar Abadi Electronic</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Style Bootstrap -->
-    <link href="css/login.css" rel="stylesheet">
-
+  <!-- Costum Style -->
+  <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="card">
+        <?php
+        if (isset($_GET['pesan'])) {
+          $pesan = $_GET['pesan'];
+          if ($pesan == "gagal") {
+        ?>
+            <div class="alert alert-danger">Anda gagal login silahkan masukkan usernamae dan password dengan benar</div>
+        <?php
+          }
+        }
+        ?>
+        <div id="card-content">
+          <div id="card-title">
+            <h2>LOGIN</h2>
+            <div class="underline-title"></div>
+          </div>
+          <form method="post" class="form">
 
-    <form action="login-proses.php" method="POST">
-        <div class="container mt-5 p-5 border border-dark rounded">
-            <?php
-            if (isset($_GET['pesan'])) {
-                $pesan = $_GET['pesan'];
-                if ($pesan == "gagal") {
-            ?>
-                    <div class="alert alert-danger">Anda gagal login silahkan masukkan usernamae dan password dengan benar</div>
-            <?php
-                }
-            }
+            <label for="user-email" style="padding-top:13px">
+                &nbsp;Email
+            </label>
+            <input id="user-email" class="form-content" type="email" name="email" autocomplete="on" required />
+            <div class="form-border"></div>
 
-            ?>
-            <div class="card-body ">
-                <div class="d-flex flex-row">
-                    <div class="col-lg-5 p-5">
-                        <h2>Login</h2>
-                        <div class="form-group mt-5 mx-4">
-                            <input type="text" class="form-control" name="username" placeholder="username">
-                        </div>
-                        <div class="form-group mb-3 mx-4">
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary center-block">Submit</button>
-                    </div>
-                    <div class="col">
+            <label for="user-password" style="padding-top:22px">
+                &nbsp;Password
+            </label>
+            <input id="user-password" class="form-content" type="password" name="password" required />
+            <div class="form-border"></div>
+        
+            <a href="#">
+              <legend id="forgot-pass">Forgot password?</legend>
+            </a>
+        
+            <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
 
-                    </div>
-                </div>
-            </div>
-
+          </form>
         </div>
-    </form>
-    <style>
-        .col {
-            background-image: url(onlineshooping.png);
-            background-size: cover;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        button {
-            margin-left: 120px;
-        }
-    </style>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  </div>
 </body>
 
 </html>
