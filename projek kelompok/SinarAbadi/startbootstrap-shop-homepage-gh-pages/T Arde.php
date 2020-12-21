@@ -79,7 +79,7 @@
 
             <?php
             include 'koneksi.php';
-              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 2");
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 8");
               $data = mysqli_fetch_array($query);
             ?>
 

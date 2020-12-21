@@ -116,10 +116,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Solder.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Solder.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>

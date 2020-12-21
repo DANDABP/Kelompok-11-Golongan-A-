@@ -129,12 +129,12 @@
             ?>
 
             <div class="card h-100">
-              <a href="produk kabel.html"><img class="card-img-top" src="#" alt=""></a>
+              <a href="Kabel UTP LAN Cat 6.php"><img class="card-img-top" src="#" alt=""></a>
 
-              <a href="produk kabel.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Kabel UTP LAN Cat 6.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="produk kabel.php"><?php echo $data['nama']; ?></a>
+                  <a href="Kabel UTP LAN Cat 6.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -152,13 +152,13 @@
             ?>
             <div class="card h-100">
 
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+              <a href="philips 14,5W.php"><img class="card-img-top" src="#" alt=""></a>
 
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="philips 14,5W.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="philips 14,5W.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -176,13 +176,13 @@
             ?>
             <div class="card h-100">
 
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+              <a href="PHILIPS LED 9 WATT WIFI.php"><img class="card-img-top" src="#" alt=""></a>
 
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="PHILIPS LED 9 WATT WIFI.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="PHILIPS LED 9 WATT WIFI.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -200,13 +200,13 @@
             ?>
             <div class="card h-100">
 
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+              <a href="Kabel HDMI 5 Meter.php"><img class="card-img-top" src="#" alt=""></a>
 
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Kabel HDMI 5 Meter.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Kabel HDMI 5 Meter.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -224,13 +224,13 @@
             ?>
             <div class="card h-100">
 
-              <a href="produk lampu.html"><img class="card-img-top" src="#" alt=""></a>
+              <a href="Philips 6W LED.php"><img class="card-img-top" src="#" alt=""></a>
 
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Philips 6W LED.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Philips 6W LED.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -248,12 +248,12 @@
             ?>
             <div class="card h-100">
 
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Broco Engkel OB.php"><img class="card-img-top" src="#" alt=""></a>
+              <a href="Broco Engkel OB.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
 
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Broco Engkel OB.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -271,11 +271,11 @@
             ?>
 
             <div class="card h-100">
-              <a href="produk speaker.html"><img class="card-img-top" src="#" alt=""></a>
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Loyal arde 2 Lubang.php"><img class="card-img-top" src="#" alt=""></a>
+              <a href="Loyal arde 2 Lubang.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Loyal arde 2 Lubang.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -292,11 +292,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="T Arde.php"><img class="card-img-top" src="#" alt=""></a>
+              <a href="T Arde.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="T Arde.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -314,11 +314,11 @@
             ?>
 
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="#" alt=""></a>
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="OPPLE 5 Watt.php"><img class="card-img-top" src="#" alt=""></a>
+              <a href="OPPLE 5 Watt.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="OPPLE 5 Watt.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
