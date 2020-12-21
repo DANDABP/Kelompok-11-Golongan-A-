@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="icon" type="image/png" href="logo 2.jpg">
+  <link rel="icon" type="image/png" href="img/logo 2.jpg">
   <title>Sinar Abadi Electronic</title>
 
   <!-- Bootstrap core CSS -->
@@ -28,8 +28,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.php">
-        <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
-        Sinar Abadi</a>
+        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
+        Sinar Abadi
+      </a>
 
   <!--Tombol Pencarian-->
         <form>
@@ -87,15 +88,25 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner" role="listbox">
+
             <div class="carousel-item active">
-              <img class="d-block img-fluid" src="Navbar1.jpg" alt="First slide">
+              <a href="contact.html" class="site-btn">
+              <img class="d-block img-fluid" src="img/Navbar1.jpg" alt="First slide">
+              </a>
             </div>
+
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="Navbar2.jpg" alt="Second slide">
+              <a href="pembayaran.php" class="site-btn">
+              <img class="d-block img-fluid" src="img/Navbar2.jpg" alt="Second slide">
+              </a>
             </div>
+
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="Navbar3.jpg" alt="Third slide">
+              <a href="pembayaran.php" class="site-btn">
+              <img class="d-block img-fluid" src="img/Navbar3.jpg" alt="Third slide">
+              </a>
             </div>
+
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -118,6 +129,8 @@
             ?>
 
             <div class="card h-100">
+              <a href="produk kabel.html"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="produk kabel.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
@@ -138,10 +151,14 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="philips 14,5W.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
+              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="philips 14,5W.php"><?php echo $data['nama']; ?></a>
+                  <a href="#"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -158,7 +175,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -178,7 +199,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -198,7 +223,11 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
+
+              <a href="produk lampu.html"><img class="card-img-top" src="#" alt=""></a>
+
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -218,7 +247,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
+
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#"><?php echo $data['nama']; ?></a>
@@ -237,7 +269,9 @@
               $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 7");
               $data = mysqli_fetch_array($query);
             ?>
+
             <div class="card h-100">
+              <a href="produk speaker.html"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
@@ -258,6 +292,7 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
@@ -277,7 +312,9 @@
               $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 9");
               $data = mysqli_fetch_array($query);
             ?>
+
             <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="#" alt=""></a>
               <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
