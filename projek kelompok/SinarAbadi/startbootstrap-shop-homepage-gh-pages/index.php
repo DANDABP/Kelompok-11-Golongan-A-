@@ -34,7 +34,7 @@
 
   <!--Tombol Pencarian-->
         <form>
-          <input class="search" type="text" placeholder="Cari..." required>	
+          <input class="search" type="text" placeholder="Cari produk atau merk" required>	
           <input class="button" type="button" value="Cari">		
         </form>
   <!--Navigasi Atas-->
