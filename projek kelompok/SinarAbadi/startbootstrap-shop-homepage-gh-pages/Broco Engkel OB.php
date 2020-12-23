@@ -35,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="index.php">Home
             </a>
           </li>
           <li class="nav-item">
@@ -62,7 +62,7 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.html" class="list-group-item">Semua Kategori</a>
+          <a href="index.php" class="list-group-item">Semua Kategori</a>
           <a href="lampu.html" class="list-group-item">Lampu</a>
           <a href="kabel.html" class="list-group-item">Kabel</a>
         </div>
@@ -95,8 +95,8 @@
             <br>
             <font color="green">STOK TERSEDIA</font>
             <br>
-            <a href="keranjang.html" class="btn btn-danger">Masukkan keranjang</a>
-            <a href="keranjang.html" class="btn btn-danger">Beli Sekarang</a>
+            <a href="keranjang.php" class="btn btn-danger">Masukkan keranjang</a>
+            <a href="checkout.php" class="btn btn-danger">Beli Sekarang</a>
           </div>
         </div>
         <!-- /.card -->

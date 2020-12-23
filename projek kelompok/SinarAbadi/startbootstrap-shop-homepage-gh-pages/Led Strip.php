@@ -62,7 +62,7 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.html" class="list-group-item">Semua Kategori</a>
+          <a href="index.php" class="list-group-item">Semua Kategori</a>
           <a href="lampu.html" class="list-group-item">Lampu</a>
           <a href="kabel.html" class="list-group-item">Kabel</a>
         </div>
