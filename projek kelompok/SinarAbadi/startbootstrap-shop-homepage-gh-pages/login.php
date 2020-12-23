@@ -50,7 +50,7 @@ if (isset($_SESSION['username'])) {
         <input id="password" class="form-content" type="password" name="password" required />
         <div class="form-border"></div>
 
-        <a href="#">
+        <a href="lupa-password.php">
           <legend id="forgot-pass">Forgot password?</legend>
         </a>
 
