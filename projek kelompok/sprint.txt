@@ -1,8 +1,8 @@
 Sprint 1 : home/katalog, about, navbar, footer, deskripsi contact dan metode pembayaran (85%, "kurang fungsi pencarian barang, dan cek syntax) 2 hari
 Sprint 2 : login admin, carousel (80%, "carousel belum dicoba") 2 hari
-Sprint 3 : keranjang, dashboard admin (15% pada dashboard admin, 10% pada keranjang) 11 hari
+Sprint 3 : keranjang, dashboard admin (10% pada dashboard admin, 20% pada keranjang) 11 hari
 Sprint 4 : checkout / verifikasi, metode pembayaran, deskripsi / detail barang (15% pada detail barang) 13 hari
 
-Tambahan : penambahan peta di bagian contact
+Tambahan : penambahan peta di bagian contact (50%)
 
 Total 14 PBI
