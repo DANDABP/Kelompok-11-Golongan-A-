@@ -37,6 +37,9 @@
           <input class="search" type="text" placeholder="Cari produk atau merk" required>	
           <input class="button" type="button" value="Cari">		
         </form>
+
+        <a class="keranjang" href="keranjang.php">
+          <img src="img/keranjang.PNG" width="35" height="35">
   <!--Navigasi Atas-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
