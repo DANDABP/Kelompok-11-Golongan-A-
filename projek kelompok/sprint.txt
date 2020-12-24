@@ -1,6 +1,6 @@
-Sprint 1 : home/katalog, about, navbar, footer, deskripsi contact dan metode pembayaran (95% kurang fungsi pencarian barang)
-Sprint 2 : login admin, carousel (80% carousel belum dicoba)
-Sprint 3 : keranjang, dashboard admin (15% pada dashboard admin)
+Sprint 1 : home/katalog, about, navbar, footer, deskripsi contact dan metode pembayaran (90%, "kurang fungsi pencarian barang, dan cek syntax)
+Sprint 2 : login admin, carousel (80%, "carousel belum dicoba")
+Sprint 3 : keranjang, dashboard admin (15% pada dashboard admin, 10% pada keranjang)
 Sprint 4 : checkout / verifikasi, metode pembayaran, deskripsi / detail barang (15% pada detail barang)
 
 Tambahan : penambahan peta di bagian contact
