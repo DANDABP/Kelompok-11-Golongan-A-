@@ -171,7 +171,7 @@
                             <div class="card-group">
                                 <input type="text" class="form-control form-control-user" id="tipe_barang" name="tipe_barang" placeholder="Tipe Barang" required>
                             </div></br>
-                            <button type="submit" class="btn btn-success" name="submit"> Tambah </button>
+                            <button type="submit" class="btn btn-danger" name="submit"> Tambah </button>
 
                     </div>
                     <!-- /.container-fluid -->
@@ -180,7 +180,7 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                <footer class="sticky-footer bg-white">
+                <footer class="py-5 bg-dark">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
                             <span>Copyright &copy; Your Website 2020</span>
