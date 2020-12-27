@@ -4,6 +4,6 @@ Sprint 3 : keranjang, dashboard admin (50% pada dashboard admin [kurang koneksi 
            untuk pesanan masuk], 20% pada keranjang) 11 hari
 Sprint 4 : checkout / verifikasi, metode pembayaran, deskripsi / detail barang (15% pada detail barang) 13 hari
 
-Tambahan : penambahan peta di bagian contact (100%)
+Tambahan : penambahan peta di bagian about (100%)
 
 Total 14 PBI
