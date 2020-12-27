@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $confirm = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
-    if ($password === $confirm) {
+    if ($password != $confirm) {
 ?>
         <script>
             alert('password yang anda masukkan tidak sama')
@@ -204,6 +204,9 @@ if (isset($_POST['submit'])) {
                             </div></br>
                             <div class="card-group">
                                 <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password Anda" require>
+                            </div></br>
+                            <div class="card-group">
+                                <input type="password" class="form-control form-control-user" id="confirm" name="confirm" placeholder="Password Anda" require>
                             </div></br>
                             <button type="submit" class="btn btn-danger" name="submit"> Tambah </button>
 

@@ -1,3 +1,8 @@
+<?php
+include "koneksi.php";
+$result = mysqli_query($koneksi, "select * from barang");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -154,87 +159,99 @@
                 </div>
                 <!-- Content Row -->
                 <div class="row">
-                    <div class="card-body">
-                        <form>
-                            <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="id_barang" name="id_barang" placeholder="ID Barang" required>
-                            </div></br>
-                            <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="nama_barang" name="nama_barang" placeholder="Nama Barang" required>
-                            </div></br>
-                            <div class="card-group">
-                                <input type="email" class="form-control form-control-user" id="nama_barang" name="nama_barang" placeholder="Harga Barang" require>
-                            </div></br>
-                            <div class="card-group">
-                                <input type="file" class="foto_barang" id="foto_barang" name="password" placeholder="Foto Barang" require>
-                            </div></br>
-                            <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="tipe_barang" name="tipe_barang" placeholder="Tipe Barang" required>
-                            </div></br>
-                            <button type="submit" class="btn btn-danger" name="submit"> Tambah </button>
+                    <div class="container">
+
+                        <table border="1" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <td>id barang</td>
+                                <td>nama</td>
+                                <td>harga</td>
+                                <td>gambar</td>
+                                <td>kategori</td>
+                                <td>edit</td>
+                            </tr>
+                            <?php
+                            $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 1");
+                            while ($row = mysqli_fetch_assoc($result)) :
+                                $data = mysqli_fetch_array($query);
+                            ?>
+                                <tr>
+                                    <td><?php echo $row["id_barang"] ?></td>
+                                    <td><?php echo $row["nama"] ?></td>
+                                    <td>Rp.<?php echo $row["harga"] ?></td>
+                                    <td><img src="image_view.php?id_barang=<?php echo $row['id_barang']; ?>" width="100" /></td>
+                                    <td><?php echo $row["kategori"] ?></td>
+                                    <td><a class="btn btn-primary" href="edit.php" role="button">Edit</a> <a class="btn btn-danger" href="hapus.php?id_barang=<?= $row['id_barang']; ?>" role="button">Hapus</a></td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </table>
 
                     </div>
-                    <!-- /.container-fluid -->
+
+
 
                 </div>
-                <!-- End of Main Content -->
-
-                <!-- Footer -->
-                <footer class="py-5 bg-dark">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2020</span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
+                <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="py-5 bg-dark">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="logout.php">Logout</a>
-                    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 
 </body>

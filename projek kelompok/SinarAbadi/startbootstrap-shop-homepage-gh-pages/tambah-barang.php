@@ -1,10 +1,10 @@
 <?php
 include('koneksi.php');
 if (isset($_POST['submit'])) {
-    if (!isset($_FILES['gambar']['tmp_name'])) {
+    if (!isset($_FILES['gambar'])) {
         echo 'pilih gambar';
     } else {
-        $file_name = $_FILES['gambar']['name'];
+        // $file_name = $_FILES['gambar']['name'];
         // $file_size = $_FILES['gambar']['size'];
         $file_type = $_FILES['gambar']['type'];
         if (($file_type == 'image/jpeg' or $file_type == 'image/png' or $file_type == 'image/jpg')) {
@@ -12,7 +12,8 @@ if (isset($_POST['submit'])) {
             $id_barang = $_POST['id_barang'];
             $harga = $_POST['harga'];
             $kategori = $_POST['kategori'];
-            mysqli_query($koneksi, "insert into barang values ('$id_barang','$file_name','$harga','$image','$file_type','$kategori')");
+            $nama = $_POST['nama'];
+            mysqli_query($koneksi, "insert into barang values ('$id_barang','$nama','$harga','$image','$file_type','$kategori')");
 ?>
             <script>
                 alert("Barang berhasil ditambahkan")
@@ -186,9 +187,9 @@ if (isset($_POST['submit'])) {
                             <div class="card-group">
                                 <input type="text" class="form-control form-control-user" id="id_barang" name="id_barang" placeholder="ID Barang" required>
                             </div></br>
-                            <!-- <div class="card-group">
+                            <div class="card-group">
                                 <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Barang" required>
-                            </div></br> -->
+                            </div></br>
                             <div class="card-group">
                                 <input type="text" class="form-control form-control-user" id="harga" name="harga" placeholder="Harga Barang" require>
                             </div></br>
