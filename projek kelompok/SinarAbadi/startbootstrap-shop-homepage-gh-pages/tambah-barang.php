@@ -198,14 +198,7 @@ if (isset($_POST['submit'])) {
                             <div class="card-group">
                                 <input type="text" class="form-control form-control-user" id="kategori" name="kategori" placeholder="Kategori" require>
                             </div></br>
-<<<<<<< Updated upstream:projek kelompok/SinarAbadi/startbootstrap-shop-homepage-gh-pages/daftar-barang.php
                             <button type="submit" class="btn btn-danger" name="submit"> Tambah </button>
-=======
-                            <!-- <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="type" name="type" placeholder="Tipe Barang" required>
-                            </div></br> -->
-                            <button type="submit" class="btn btn-success" name="submit"> Tambah </button>
->>>>>>> Stashed changes:tambah-barang.php
 
                     </div>
                     <!-- /.container-fluid -->
