@@ -35,15 +35,16 @@
           <div class="bg-light py-2 collapse-inner rounded">
             <h6 class="collapse-header">Form:</h6>
             <a class="collapse-item" href="registration.php">Registration</a>
+            <a class="collapse-item" href="tambah-barang.php">Tambah Barang</a>
             <a class="collapse-item" href="daftar-barang.php">Daftar Barang</a>
           </div>
         </div>
       </li>
-          
-            
+
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
-      
+
 
       <!-- Sidebar Toggler (Sidebar) -->
 
