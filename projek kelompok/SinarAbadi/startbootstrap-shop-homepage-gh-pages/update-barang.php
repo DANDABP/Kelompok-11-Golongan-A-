@@ -1,8 +1,3 @@
-<?php
-include "koneksi.php";
-$result = mysqli_query($koneksi, "select * from barang");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -159,35 +154,47 @@ $result = mysqli_query($koneksi, "select * from barang");
                 </div>
                 <!-- Content Row -->
                 <div class="row">
-                    <div class="container">
+                    <?php
+                    include "koneksi.php";
+                    $id = $_GET['id_barang'];
+                    // var_dump($id);
+                    $query = mysqli_query($koneksi, "select * from barang where id_barang = $id");
+                    $data = mysqli_fetch_array($query);
+                    // $result = mysqli_query($koneksi, "select * from barang");
+                    // $row = mysqli_fetch_assoc($result);
 
-                        <table border="1" cellpadding="10" cellspacing="0">
-                            <tr>
-                                <td>id barang</td>
-                                <td>nama</td>
-                                <td>harga</td>
-                                <td>gambar</td>
-                                <td>kategori</td>
-                                <td>edit</td>
-                            </tr>
-                            <?php
-                            // $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 1");
-                            while ($row = mysqli_fetch_assoc($result)) :
-                                // $data = mysqli_fetch_array($query);
-                            ?>
-                                <tr>
-                                    <td><?php echo $row["id_barang"] ?></td>
-                                    <td><?php echo $row["nama"] ?></td>
-                                    <td>Rp.<?php echo $row["harga"] ?></td>
-                                    <td><img src="image_view.php?id_barang=<?php echo $row['id_barang']; ?>" width="100" /></td>
-                                    <td><?php echo $row["kategori"] ?></td>
-                                    <td><a class="btn btn-primary" href="update-barang.php?id_barang=<?= $row['id_barang']; ?>" role="button">Edit</a> <a class="btn btn-danger" href="hapus.php?id_barang=<?= $row['id_barang']; ?>" role="button">Hapus</a></td>
-                                </tr>
-                            <?php endwhile; ?>
-                        </table>
+
+                    // $hasil = implode($row);
+                    // var_dump($row);
+                    // while ($data = mysqli_fetch_assoc($query)) {
+                    ?>
+                    <div class="card-body">
+                        <form action="updatebarang-proses.php" method="post">
+                            <div class="card-group">
+                                <input type="text" class="form-control form-control-user" id="id_barang" name="id_barang" placeholder="ID Barang" value="<?= $data['id_barang']; ?>" required>
+                            </div></br>
+                            <div class="card-group">
+                                <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Barang" value="<?= $data['nama']; ?>" required>
+                            </div></br>
+                            <div class="card-group">
+                                <input type="text" class="form-control form-control-user" id="harga" name="harga" placeholder="Harga Barang" value="Rp.<?= $data['harga']; ?>" require>
+                            </div></br>
+                            <div class="card_group">
+                                <img src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" width="100" />
+                            </div></br>
+                            <div class="card-group">
+                                <input type="file" class="gambar" id="gambar" name="gambar" placeholder="Foto Barang" require>
+                            </div></br>
+                            <div class="card-group">
+                                <input type="text" class="form-control form-control-user" id="kategori" name="kategori" placeholder="Kategori" value="<?= $data['kategori']; ?>" require>
+                            </div></br>
+                            <button type="submit" class="btn btn-danger" name="submit"> Tambah </button>
 
                     </div>
+                    <?php
+                    // }
 
+                    ?>
 
 
                 </div>
