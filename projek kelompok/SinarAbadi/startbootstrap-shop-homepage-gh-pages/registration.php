@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
     $confirm = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
-    if ($password != $confirm) {
+    if ($password == $confirm) {
 ?>
         <script>
             alert('password yang anda masukkan tidak sama')
@@ -32,7 +32,9 @@ if (isset($_POST['submit'])) {
 
         );
         $saved = $stmt->execute($params);
-        if ($saved) header("location: login.php");
+        if ($saved) {
+            header("location: login.php");
+        }
     }
 }
 ?>
