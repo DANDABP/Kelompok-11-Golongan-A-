@@ -78,8 +78,9 @@
     <div class="col-lg-9">
 
             <?php
-            include 'koneksi.php';
-              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = 9");
+              include 'koneksi.php';
+              $id = $_GET['id_barang'];
+              $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE id_barang = $id");
               $data = mysqli_fetch_array($query);
             ?>
 
@@ -95,7 +96,7 @@
             <br>
             <font color="green">STOK TERSEDIA</font>
             <br>
-            <a href="keranjang.php" class="btn btn-danger">Masukkan keranjang</a>
+            <a href="keranjang.php?id_barang= <?php echo $data['id_barang']; ?> &action=add" class="btn btn-danger">Masukkan keranjang</a>
             <a href="checkout.php" class="btn btn-danger">Beli Sekarang</a>
           </div>
         </div>
