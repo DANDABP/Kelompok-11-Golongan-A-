@@ -33,9 +33,9 @@
       </a>
 
   <!--Tombol Pencarian-->
-        <form>
-          <input class="search" type="text" placeholder="Cari produk atau merk" required>	
-          <input class="button" type="button" value="Cari">		
+        <form action="cari.php" method="get">
+          <input class="search" name="search" type="text" placeholder="Cari produk atau merk" required>	
+          <input class="button" type="submit" value="Cari">
         </form>
 
         <a class="keranjang" href="keranjang.php">
