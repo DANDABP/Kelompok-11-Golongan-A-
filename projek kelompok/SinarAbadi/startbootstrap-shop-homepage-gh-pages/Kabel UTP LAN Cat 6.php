@@ -45,7 +45,7 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="pembayaran.html">Pembayaran</a>
+            <a class="nav-link" href="pembayaran.php">Pembayaran</a>
             <span class="sr-only">(current)</span>
           </li>
         </ul>
@@ -63,8 +63,8 @@
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
           <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.html" class="list-group-item">Lampu</a>
-          <a href="kabel.html" class="list-group-item">Kabel</a>
+          <a href="lampu.php" class="list-group-item">Lampu</a>
+          <a href="kabel.php" class="list-group-item">Kabel</a>
         </div>
 
       </div>
