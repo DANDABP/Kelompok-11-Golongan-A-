@@ -180,12 +180,12 @@
                 </div>
               </td>
 
-              <td class="align-middle border-0">
-                <p class="mb-0 small"><?php echo $cart[$i]->harga * $cart[$i]->jumlah; ?>.000</p>
+              <td class="align-middle border-0"><?php $subtotal = ($cart[$i]->harga * $cart[$i]->jumlah)*1000; ?>
+                <p class="mb-0 small"><?php echo $subtotal ; ?></p>
               </td>
 
               <td class="align-middle border-0"><a class="reset-anchor" href="#"><i class="fas fa-trash-alt small text-muted"></i></a></td>
-            </tr><?php }?>
+            </tr><?php $index++;}?>
             
           </tbody>
         </table>
@@ -204,11 +204,8 @@
         <div class="card-body">
           <h5 class="text-uppercase mb-4">Total</h5>
           <ul class="list-unstyled mb-0">
-            <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small font-weight-bold">Subtotal</strong><span class="text-muted small">Rp. 120.00
-                <br> Rp. 28.500
-            </span></li>
             <li class="border-bottom my-2"></li>
-            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Total</strong><span>Rp. 148.500</span></li>
+            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Rp. <?php echo $s * 1000; ?></strong></li>
             <li>
             </li>
           </ul>
@@ -219,6 +216,11 @@
 </section>
 </div>
 
+<?php
+  if (isset($_GET['id_barang']) || isset($_GET['index'])){
+    header ('Location:kerajang.php');
+  }
+?>
 
         </div>
         <!-- /.col-lg-3 -->
