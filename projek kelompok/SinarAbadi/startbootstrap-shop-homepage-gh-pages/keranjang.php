@@ -79,7 +79,7 @@
         <div class="row">
           <div class="col-lg-8 mb-4 mb-lg-0">
               <!-- CART TABLE-->
-       <div class="table-responsive mb-4">
+      <div class="table-responsive mb-4">
         <table class="table">
           <thead class="bg-light">
             <tr>
@@ -90,53 +90,103 @@
               <th class="border-0" scope="col"> </th>
             </tr>
           </thead>
+
+          <?php
+            include 'koneksi.php';
+            require 'item.php';
+            session_start();
+            if(isset ($_GET['id_barang']) && !isset ($_POST['update'])){
+              $sql = $koneksi->query('select * from barang where id_barang = '.$_GET['id_barang']);
+              $data = mysqli_fetch_array($sql);
+              $item = new Item();
+              $item->id_barang = $data['id_barang'];
+              $item->nama = $data['nama'];
+              $item->harga = $data['harga'];
+              $item->jumlah = 1;
+
+              // cek item
+
+              $index = -1;
+
+              // ubah cart string menjadi array
+
+              $cart = unserialize(serialize($_SESSION['cart']));
+              for($i=0; $i<count($cart);$i++)
+                if ($cart[$i]->id_barang == $_GET['id_barang']){
+                  $index = $i;
+                  break;
+                }
+                if($index == -1) 
+                $_SESSION['cart'][] = $item;
+                else {
+                if (($cart[$index]->jumlah) < $iteminstock)
+                  $cart[$index]->jumlah ++;
+                  $_SESSION['cart'] = $cart;
+              }
+            }
+
+            // delete item
+
+            if (isset($_GET['index']) && !isset($_POST['update'])){
+              $cart = unserialize(serialize($_SESSION['cart']));
+              unset($cart[$_GET['index']]);
+              $cart = array_values($cart);
+              $_SESSION['cart'] = $cart;
+            }
+
+            // update jumlah
+
+            if(isset($_POST['update'])) {
+              $arrjumlah = $_POST['jumlah'];
+              $cart = unserialize(serialize($_SESSION['cart']));
+              for($i=0; $i<count($cart);$i++) {
+                $cart[$i]->jumlah = $arrjumlah[$i];
+              }
+              $_SESSION['cart'] = $cart;
+            }
+          ?>
+
           <tbody>
+            <?php
+              $cart = unserialize(serialize($_SESSION['cart']));
+              $s = 0;
+              $index = 0;
+              for($i=0; $i<count($cart); $i++){
+                $s += $cart[$i]->harga * $cart[$i]->jumlah;
+            ?>
             <tr>
               <th class="pl-0 border-0" scope="row">
-                <div class="media align-items-center"><a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="LAN.jpg" alt="..." width="70"/></a>
-                  <div class="media-body ml-3"><strong class="h6"><a class="reset-anchor animsition-link" href="produk kabel.html">Kabel UTP LAN Cat 6</a></strong></div>
+                <div class="media align-items-center">
+                  <?php $index; ?>
+                  <a href="keranjang.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')" >Delete</a>
+                  <a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="image_view.php?id_barang=<?php echo $cart[$i]->id_barang; ?>" alt="..." width="70"/></a>
+                  <div class="media-body ml-3"><strong class="h6">
+                    <a class="reset-anchor animsition-link" href="produk kabel.html"><?php echo $cart[$i]->nama; ?></a></strong>
+                  </div>
                 </div>
               </th>
+
               <td class="align-middle border-0">
-                <p class="mb-0 small">Rp. 120.000</p>
+                <p class="mb-0 small"><?php echo $cart[$i]->harga; ?></p>
               </td>
+
               <td class="align-middle border-0">
-                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family">Quantity</span>
+                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family"></span>
                   <div class="quantity">
                     <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                    <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" value="1"/>
+                    <?php echo $cart[$i]->jumlah; ?>
                     <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
                   </div>
                 </div>
               </td>
+
               <td class="align-middle border-0">
-                <p class="mb-0 small">Rp. 120.000</p>
+                <p class="mb-0 small"><?php echo $cart[$i]->harga * $cart[$i]->jumlah; ?>.000</p>
               </td>
+
               <td class="align-middle border-0"><a class="reset-anchor" href="#"><i class="fas fa-trash-alt small text-muted"></i></a></td>
-            </tr>
-            <tr>
-              <th class="pl-0 border-light" scope="row">
-                <div class="media align-items-center"><a class="reset-anchor d-block animsition-link" href="produk lampu.html"><img src="philips 6W.jfif" alt="..." width="70"/></a>
-                  <div class="media-body ml-3"><strong class="h6"><a class="reset-anchor animsition-link" href="produk lampu.html">Philips 6W LED</a></strong></div>
-                </div>
-              </th>
-              <td class="align-middle border-light">
-                <p class="mb-0 small">Rp. 28.500</p>
-              </td>
-              <td class="align-middle border-light">
-                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family">Quantity</span>
-                  <div class="quantity">
-                    <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                    <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" value="1"/>
-                    <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
-                  </div>
-                </div>
-              </td>
-              <td class="align-middle border-light">
-                <p class="mb-0 small">Rp. 28.500</p>
-              </td>
-              <td class="align-middle border-light"><a class="reset-anchor" href="#"><i class="fas fa-trash-alt small text-muted"></i></a></td>
-            </tr>
+            </tr><?php }?>
+            
           </tbody>
         </table>
       </div>
