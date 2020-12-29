@@ -12,6 +12,7 @@ if (isset($_SESSION['username'])) {
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="img/logo 2.jpg">
   <title>Sinar Abadi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -50,7 +51,7 @@ if (isset($_SESSION['username'])) {
         <input id="password" class="form-content" type="password" name="password" required />
         <div class="form-border"></div>
 
-        <a href="#">
+        <a href="lupa-password.php">
           <legend id="forgot-pass">Forgot password?</legend>
         </a>
 

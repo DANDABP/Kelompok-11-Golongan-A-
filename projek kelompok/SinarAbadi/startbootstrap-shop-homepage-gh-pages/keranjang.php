@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="icon" type="image/png" href="logo 2.jpg">
+  <link rel="icon" type="image/png" href="img/logo 2.jpg">
   <title>Sinar Abadi Electronic</title>
 
   <!-- Bootstrap core CSS -->
@@ -24,8 +24,8 @@
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
+      <a class="navbar-brand" href="index.php">
+        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
 
   <!-- Navigasi Atas -->
@@ -35,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="index.php">Home
             </a>
           </li>
           <li class="nav-item">
@@ -44,8 +44,8 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="pembayaran.html">Pembayaran</a>
+          <li class="nav-item">
+            <a class="nav-link" href="pembayaran.php">Pembayaran</a>
             <span class="sr-only">(current)</span>
           </li>
         </ul>
@@ -62,9 +62,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.html" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.html" class="list-group-item">Lampu</a>
-          <a href="kabel.html" class="list-group-item">Kabel</a>
+          <a href="index.php" class="list-group-item">Semua Kategori</a>
+          <a href="lampu.php" class="list-group-item">Lampu</a>
+          <a href="kabel.php" class="list-group-item">Kabel</a>
         </div>
 
       </div>
@@ -79,7 +79,7 @@
         <div class="row">
           <div class="col-lg-8 mb-4 mb-lg-0">
               <!-- CART TABLE-->
-       <div class="table-responsive mb-4">
+      <div class="table-responsive mb-4">
         <table class="table">
           <thead class="bg-light">
             <tr>
@@ -90,53 +90,103 @@
               <th class="border-0" scope="col"> </th>
             </tr>
           </thead>
+
+          <?php
+            include 'koneksi.php';
+            require 'item.php';
+            session_start();
+            if(isset ($_GET['id_barang']) && !isset ($_POST['update'])){
+              $sql = $koneksi->query('select * from barang where id_barang = '.$_GET['id_barang']);
+              $data = mysqli_fetch_array($sql);
+              $item = new Item();
+              $item->id_barang = $data['id_barang'];
+              $item->nama = $data['nama'];
+              $item->harga = $data['harga'];
+              $item->jumlah = 1;
+
+              // cek item
+
+              $index = -1;
+
+              // ubah cart string menjadi array
+
+              $cart = unserialize(serialize($_SESSION['cart']));
+              for($i=0; $i<count($cart);$i++)
+                if ($cart[$i]->id_barang == $_GET['id_barang']){
+                  $index = $i;
+                  break;
+                }
+                if($index == -1) 
+                $_SESSION['cart'][] = $item;
+                else {
+                if (($cart[$index]->jumlah) < $iteminstock)
+                  $cart[$index]->jumlah ++;
+                  $_SESSION['cart'] = $cart;
+              }
+            }
+
+            // delete item
+
+            if (isset($_GET['index']) && !isset($_POST['update'])){
+              $cart = unserialize(serialize($_SESSION['cart']));
+              unset($cart[$_GET['index']]);
+              $cart = array_values($cart);
+              $_SESSION['cart'] = $cart;
+            }
+
+            // update jumlah
+
+            if(isset($_POST['update'])) {
+              $arrjumlah = $_POST['jumlah'];
+              $cart = unserialize(serialize($_SESSION['cart']));
+              for($i=0; $i<count($cart);$i++) {
+                $cart[$i]->jumlah = $arrjumlah[$i];
+              }
+              $_SESSION['cart'] = $cart;
+            }
+          ?>
+
           <tbody>
+            <?php
+              $cart = unserialize(serialize($_SESSION['cart']));
+              $s = 0;
+              $index = 0;
+              for($i=0; $i<count($cart); $i++){
+                $s += $cart[$i]->harga * $cart[$i]->jumlah;
+            ?>
             <tr>
               <th class="pl-0 border-0" scope="row">
-                <div class="media align-items-center"><a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="LAN.jpg" alt="..." width="70"/></a>
-                  <div class="media-body ml-3"><strong class="h6"><a class="reset-anchor animsition-link" href="produk kabel.html">Kabel UTP LAN Cat 6</a></strong></div>
+                <div class="media align-items-center">
+                  <?php $index; ?>
+                  <a href="keranjang.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')" >Delete</a>
+                  <a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="image_view.php?id_barang=<?php echo $cart[$i]->id_barang; ?>" alt="..." width="70"/></a>
+                  <div class="media-body ml-3"><strong class="h6">
+                    <a class="reset-anchor animsition-link" href="produk kabel.html"><?php echo $cart[$i]->nama; ?></a></strong>
+                  </div>
                 </div>
               </th>
+
               <td class="align-middle border-0">
-                <p class="mb-0 small">Rp. 120.000</p>
+                <p class="mb-0 small"><?php echo $cart[$i]->harga; ?></p>
               </td>
+
               <td class="align-middle border-0">
-                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family">Quantity</span>
+                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family"></span>
                   <div class="quantity">
                     <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                    <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" value="1"/>
+                    <?php echo $cart[$i]->jumlah; ?>
                     <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
                   </div>
                 </div>
               </td>
-              <td class="align-middle border-0">
-                <p class="mb-0 small">Rp. 120.000</p>
+
+              <td class="align-middle border-0"><?php $subtotal = ($cart[$i]->harga * $cart[$i]->jumlah)*1000; ?>
+                <p class="mb-0 small"><?php echo $subtotal ; ?></p>
               </td>
+
               <td class="align-middle border-0"><a class="reset-anchor" href="#"><i class="fas fa-trash-alt small text-muted"></i></a></td>
-            </tr>
-            <tr>
-              <th class="pl-0 border-light" scope="row">
-                <div class="media align-items-center"><a class="reset-anchor d-block animsition-link" href="produk lampu.html"><img src="philips 6W.jfif" alt="..." width="70"/></a>
-                  <div class="media-body ml-3"><strong class="h6"><a class="reset-anchor animsition-link" href="produk lampu.html">Philips 6W LED</a></strong></div>
-                </div>
-              </th>
-              <td class="align-middle border-light">
-                <p class="mb-0 small">Rp. 28.500</p>
-              </td>
-              <td class="align-middle border-light">
-                <div class="border d-flex align-items-center justify-content-between px-3"><span class="small text-uppercase text-gray headings-font-family">Quantity</span>
-                  <div class="quantity">
-                    <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
-                    <input class="form-control form-control-sm border-0 shadow-0 p-0" type="text" value="1"/>
-                    <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
-                  </div>
-                </div>
-              </td>
-              <td class="align-middle border-light">
-                <p class="mb-0 small">Rp. 28.500</p>
-              </td>
-              <td class="align-middle border-light"><a class="reset-anchor" href="#"><i class="fas fa-trash-alt small text-muted"></i></a></td>
-            </tr>
+            </tr><?php $index++;}?>
+            
           </tbody>
         </table>
       </div>
@@ -154,11 +204,8 @@
         <div class="card-body">
           <h5 class="text-uppercase mb-4">Total</h5>
           <ul class="list-unstyled mb-0">
-            <li class="d-flex align-items-center justify-content-between"><strong class="text-uppercase small font-weight-bold">Subtotal</strong><span class="text-muted small">Rp. 120.00
-                <br> Rp. 28.500
-            </span></li>
             <li class="border-bottom my-2"></li>
-            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Total</strong><span>Rp. 148.500</span></li>
+            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Rp. <?php echo $s * 1000; ?></strong></li>
             <li>
             </li>
           </ul>
@@ -169,6 +216,11 @@
 </section>
 </div>
 
+<?php
+  if (isset($_GET['id_barang']) || isset($_GET['index'])){
+    header ('Location:kerajang.php');
+  }
+?>
 
         </div>
         <!-- /.col-lg-3 -->

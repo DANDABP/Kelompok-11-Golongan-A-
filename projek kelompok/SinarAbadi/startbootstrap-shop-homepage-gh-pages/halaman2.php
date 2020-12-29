@@ -126,10 +126,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="OPPLE downlight 5 Watt.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="OPPLE downlight 5 Watt.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -146,10 +146,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Led Strip.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Led Strip.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -166,10 +166,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Hannochs Genius 8 Watt.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Hannochs Genius 8 Watt.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -186,10 +186,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Schneider Engkel.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Schneider Engkel.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -206,10 +206,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Stop Contac Panasonic Tanam.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Stop Contac Panasonic Tanam.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -226,10 +226,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Fiting Broco.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Fiting Broco.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -246,10 +246,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Remot Joker Multi.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Remot Joker Multi.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -266,10 +266,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Extrana 2x1.5 50 Meter.php"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Extrana 2x1.5 50 Meter.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>
@@ -286,10 +286,10 @@
               $data = mysqli_fetch_array($query);
             ?>
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+              <a href="Extrana NYA 1.5 100 Meter"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#"><?php echo $data['nama']; ?></a>
+                  <a href="Extrana NYA 1.5 100 Meter.php"><?php echo $data['nama']; ?></a>
                 </h4>
                 <h5>Rp <?php echo $data['harga']; ?></h5>
                 <font color="green">STOK TERSEDIA</font>

@@ -59,3 +59,8 @@ ul.pagination li a:hover:not(.active) {
 div.center {
   text-align: center;
 }
+
+.keranjang {
+  position: relative;
+  left: 10px;
+}
