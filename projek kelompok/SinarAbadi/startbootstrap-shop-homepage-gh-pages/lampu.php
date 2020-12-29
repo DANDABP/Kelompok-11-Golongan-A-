@@ -27,14 +27,14 @@
       <a class="navbar-brand" href="index.html">
         <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
-  
-  <!-- Tombol Pencarian -->
-  <form>
-    <input class="search" type="text" placeholder="Cari..." required>	
-    <input class="button" type="button" value="Cari">		
-  </form>
 
-  <!-- Navigasi Atas -->
+      <!-- Tombol Pencarian -->
+      <form>
+        <input class="search" type="text" placeholder="Cari..." required>
+        <input class="button" type="button" value="Cari">
+      </form>
+
+      <!-- Navigasi Atas -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -105,10 +105,40 @@
           </a>
         </div>
 
-      <!-- Produk -->
+        <!-- Produk -->
         <div class="row">
+          <?php
+          include "koneksi.php";
 
-          <div class="col-lg-4 col-md-6 mb-4">
+          $row = mysqli_query($koneksi, "select * from barang");
+          $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE kategori = 'lampu'");
+          $data = mysqli_fetch_assoc($query);
+          ?>
+
+          <?php while ($data = mysqli_fetch_assoc($query)) :
+          ?>
+            <div class="col-lg-4 col-md-6 mb-4">
+
+
+              <div class="card h-100">
+                <a href="deskripsi.php?id_barang=<?php echo $data['id_barang']; ?>"><img class="card-img-top" src="#" alt=""></a>
+
+                <a href="deskripsi.php?id_barang=<?php echo $data['id_barang']; ?>"><img class="card-img-top" src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="deskripsi.php?id_barang=<?php echo $data['id_barang']; ?>"><?php echo $data['nama']; ?></a>
+                  </h4>
+                  <h5>Rp <?php echo $data['harga']; ?></h5>
+                  <font color="green">STOK TERSEDIA</font>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; ?>
+
+          <!-- <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="panasonic 23W.jfif" alt=""></a>
               <div class="card-body">
@@ -202,7 +232,7 @@
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
         <!-- /.col-lg-3 -->
