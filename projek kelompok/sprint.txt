@@ -7,3 +7,9 @@ Sprint 4 : checkout / verifikasi, metode pembayaran, deskripsi / detail barang (
 Tambahan : penambahan peta di bagian about (100%)
 
 Total 14 PBI
+
+Carousel, peta pada about (Devi)
+Pindah halaman (dillah)
+Login (danbu)
+Tambah barang & lihat barang (fadhil)
+Tambah admin, keranjang (syaugi)
