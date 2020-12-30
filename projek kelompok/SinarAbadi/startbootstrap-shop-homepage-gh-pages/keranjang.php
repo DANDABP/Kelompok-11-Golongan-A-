@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
@@ -194,7 +193,7 @@
       <div class="bg-light px-4 py-3">
         <div class="row align-items-center text-center">
           <div class="col-md-6 mb-3 mb-md-0 text-md-left"><a class="btn btn-link p-0 text-dark btn-sm" href="index.php"><i class="fas fa-long-arrow-alt-left mr-2"> </i>Continue shopping</a></div>
-          <div class="col-md-6 text-md-right"><a class="btn btn-outline-dark btn-danger" href="checkout.php">Checkout<i class="fas fa-long-arrow-alt-right ml-2"></i></a></div>
+          <div class="col-md-6 text-md-right"><a class="btn btn-outline-dark btn-danger" href="checkout.php?total=<?php echo $s*1000; ?>">Checkout<i class="fas fa-long-arrow-alt-right ml-2"></i></a></div>
         </div>
       </div>
     </div>
@@ -218,7 +217,11 @@
 
 <?php
   if (isset($_GET['id_barang']) || isset($_GET['index'])){
-    header ('Location:kerajang.php');
+    ?>
+    <script>
+      self.location="./keranjang.php";
+    </script>
+    <?php
   }
 ?>
 

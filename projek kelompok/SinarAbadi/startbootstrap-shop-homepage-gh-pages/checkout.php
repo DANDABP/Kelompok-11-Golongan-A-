@@ -76,7 +76,8 @@
 
       <!-- Produk -->
       <?php
-      
+        include './koneksi.php';
+        $total = $_GET['total'];
       ?>
 
       <div class="card card-outline-secondary my-4" style="width: 500px;">
@@ -85,7 +86,7 @@
           <h5 class="text-uppercase mb-4">Total</h5>
           <ul class="list-unstyled mb-0">
             <li class="border-bottom my-2"></li>
-            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Rp. <?php echo $s * 1000; ?></strong></li>
+            <li class="d-flex align-items-center justify-content-between mb-4"><strong class="text-uppercase small font-weight-bold">Rp. <?php echo $total; ?></strong></li>
             <li>
             </li>
           </ul>
@@ -100,7 +101,7 @@
             </h4>
           </div>
 <div class="card-body">
-    <form>
+    <form method="post" action="./konfirmasi.php?total=<?php echo $total; ?>">
         <div class="form-group">
             <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Nama " required>
 </div>
