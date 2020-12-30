@@ -37,6 +37,7 @@
             <a class="collapse-item" href="registration.php">Registration</a>
             <a class="collapse-item" href="tambah-barang.php">Tambah Barang</a>
             <a class="collapse-item" href="daftar-barang.php">Daftar Barang</a>
+            <a class="collapse-item" href="daftar-pesanan.php">Daftar Pesanan</a>
           </div>
         </div>
       </li>
