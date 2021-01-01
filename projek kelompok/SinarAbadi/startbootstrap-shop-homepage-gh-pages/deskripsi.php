@@ -96,8 +96,8 @@
             <br>
             <font color="green">STOK TERSEDIA</font>
             <br>
-            <a href="keranjang.php?id_barang= <?php echo $data['id_barang']; ?> &action=add" class="btn btn-danger">Masukkan keranjang</a>
-            <a href="checkout.php" class="btn btn-danger">Beli Sekarang</a>
+            <a href="keranjang.php?id_barang= <?php echo $data['id_barang']; ?> &action=add" class="btn btn-outline-dark btn-danger">Masukkan keranjang</a>
+            <a href="checkout.php" class="btn btn-outline-dark btn-danger">Beli Sekarang</a>
           </div>
         </div>
         <!-- /.card -->

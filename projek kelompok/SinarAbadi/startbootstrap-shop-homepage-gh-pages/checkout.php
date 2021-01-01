@@ -129,7 +129,7 @@
       <option>GrabExpress</option>
     </select>
   </div>
-<button type="submit" class="btn btn-danger" name="submit">Konfirmasi</button>
+  <div class="col-md-12 text-right"><button type="submit" class="btn btn-outline-dark btn-danger" name="submit">Konfirmasi</button>
 
 </form>
 </div>
