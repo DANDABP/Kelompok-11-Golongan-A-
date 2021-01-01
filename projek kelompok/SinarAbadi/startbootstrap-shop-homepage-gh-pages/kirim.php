@@ -8,6 +8,6 @@
 <body>
     <h1>barang anda sedang dikirim tunggu beberapa saat</h1>
 
-    <button href="kirim-selesai.php" type="submit">barang diterima</button>
+    <a href="kirim-selesai.php"><button type="submit">barang diterima</button></a>
 </body>
 </html>

@@ -76,13 +76,14 @@
         </h3>
 	</div></center>
     <div class="card-body">
-    <form action="proses.php" method="post">
-        <h6 name="nama">Nama : <?php echo $nama; ?></h6>
-        <h6 name="alamat">Alamat : <?php echo $alamat; ?></h6>
-        <h6 name="email">Email : <?php echo $email; ?></h6>
-        <h6 name="bayar">Metode Pembayaran : <?php echo $bayar; ?></h6>
-        <h6 name="kirim">Metode Pengiriman : <?php echo $kirim; ?></h6>
-        <h6 name="total">Total : <?php echo $total; ?></h6>
+    <form action="proses.php?nama=<?php echo $nama; ?>&nomor=<?php echo $nomor; ?>&alamat=<?php echo $alamat; ?>&email=<?php echo $email; ?>&bayar=<?php echo $bayar; ?>&kirim=<?php echo $kirim; ?>" method="post">
+        <h6>Nama : <?php echo $nama; ?></h6>
+        <h6>Alamat : <?php echo $alamat; ?></h6>
+        <h6>Nomor Handphone : <?php echo $nomor; ?></h6>
+        <h6>Email : <?php echo $email; ?></h6>
+        <h6>Metode Pembayaran : <?php echo $bayar; ?></h6>
+        <h6>Metode Pengiriman : <?php echo $kirim; ?></h6>
+        <h6>Total : <?php echo $total; ?></h6>
         <h6>Bukti Pembayaran</h6><br>
         <input type="file" name="bukti" id="bukti"><br><br><br>
         <div class="card-footer">

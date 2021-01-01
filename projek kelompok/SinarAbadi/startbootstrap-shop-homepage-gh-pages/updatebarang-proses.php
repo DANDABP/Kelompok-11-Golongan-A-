@@ -9,4 +9,5 @@ $sql = "update barang set id_barang='$id_barang', nama='$nama', harga='$harga', 
 
 $hasil = mysqli_query($koneksi, $sql);
 
-header("location:update-barang.php");
+header("location:update-barang.php?id_barang=$id_barang");
+?>
