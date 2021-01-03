@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="icon" type="image/png" href="logo 2.jpg">
+  <link rel="icon" type="image/png" href="img/logo 2.jpg">
   <title>Sinar Abadi Electronic</title>
 
   <!-- Bootstrap core CSS -->
@@ -24,8 +24,8 @@
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
+      <a class="navbar-brand" href="index.php">
+        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
 
   <!-- Navigasi Atas -->
@@ -61,7 +61,7 @@
     <h1>Sinar Abadi</h1>
 	</div>
     <div class="card-body">
-    <img class="card-img-top img-fluid" style="width: 300px" src="terima.jpg" alt="">
+    <img class="card-img-top img-fluid" style="width: 300px" src="img/terima.jpg" alt="">
     <h1>Terima Kasih telah memesan dari toko kami</h1></center>
     </div>
     <div class="card-footer">

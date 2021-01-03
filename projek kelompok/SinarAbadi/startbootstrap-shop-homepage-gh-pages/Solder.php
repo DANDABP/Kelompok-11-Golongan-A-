@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="icon" type="image/png" href="logo 2.jpg">
+  <link rel="icon" type="image/png" href="img/logo 2.jpg">
   <title>Sinar Abadi Electronic</title>
 
   <!-- Bootstrap core CSS -->
@@ -24,8 +24,8 @@
   <!-- Judul Navigasi -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
+      <a class="navbar-brand" href="index.php">
+        <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
 
   <!-- Navigasi Atas -->
@@ -45,7 +45,7 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="pembayaran.html">Pembayaran</a>
+            <a class="nav-link" href="pembayaran.php">Pembayaran</a>
             <span class="sr-only">(current)</span>
           </li>
         </ul>
@@ -63,8 +63,8 @@
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
           <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.html" class="list-group-item">Lampu</a>
-          <a href="kabel.html" class="list-group-item">Kabel</a>
+          <a href="lampu.php" class="list-group-item">Lampu</a>
+          <a href="kabel.php" class="list-group-item">Kabel</a>
         </div>
 
       </div>
