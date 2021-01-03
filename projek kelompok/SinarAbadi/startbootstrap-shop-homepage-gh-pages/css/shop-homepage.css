@@ -64,3 +64,13 @@ div.center {
   position: relative;
   left: 10px;
 }
+
+/*
+  Keranjang
+ */
+
+.delete {
+  background-color: #dc3545;
+  padding: 23px 5px;
+  color: white;
+}
