@@ -112,10 +112,11 @@
 
           $row = mysqli_query($koneksi, "select * from barang");
           $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE kategori = 'lampu'");
-          $data = mysqli_fetch_assoc($query);
-          ?>
+          // $data = mysqli_fetch_assoc($query);
 
-          <?php while ($data = mysqli_fetch_assoc($query)) :
+
+          while ($data = mysqli_fetch_assoc($query)) :
+            // var_dump($data);
           ?>
             <div class="col-lg-4 col-md-6 mb-4">
 

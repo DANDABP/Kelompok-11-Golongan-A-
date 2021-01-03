@@ -1,8 +1,14 @@
 <?php
+session_start();
 include('koneksi.php');
+$id = mysqli_query($koneksi, "select id from barang");
 if (isset($_POST['submit'])) {
     if (!isset($_FILES['gambar'])) {
-        echo 'pilih gambar';
+?>
+        <script>
+            alert("Barang berhasil ditambahkan")
+        </script>
+        <?php
     } else {
         // $file_name = $_FILES['gambar']['name'];
         // $file_size = $_FILES['gambar']['size'];
@@ -14,7 +20,7 @@ if (isset($_POST['submit'])) {
             $kategori = $_POST['kategori'];
             $nama = $_POST['nama'];
             mysqli_query($koneksi, "insert into barang values ('$id_barang','$nama','$harga','$image','$file_type','$kategori')");
-?>
+        ?>
             <script>
                 alert("Barang berhasil ditambahkan")
             </script>

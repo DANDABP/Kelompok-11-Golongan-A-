@@ -1,43 +1,34 @@
 <?php
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "db_sinarabadi";
-try {
-    //create PDO connection 
-    $db = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-} catch (PDOException $e) {
-    //show error
-    die("Terjadi masalah: " . $e->getMessage());
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("location:login.php");
+    exit;
 }
+include "koneksi.php";
+
 if (isset($_POST['submit'])) {
-    $nama = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $confirm = password_hash($_POST["confirm"], PASSWORD_DEFAULT);
-    if ($password == $confirm) {
+    $password = $_POST['password'];
+    $konfirmasi = $_POST['confirm'];
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    if ($password === $konfirmasi) {
+        mysqli_query($koneksi, "insert into admin values ('','$nama','$email','$password')");
 ?>
         <script>
-            alert('password yang anda masukkan tidak sama')
+            alert("registrasi admin berhasil")
+        </script>
+    <?php
+    } else {
+    ?>
+        <script>
+            alert("password tidak sama")
         </script>
 <?php
-    } else {
-        $sql = "insert into admin (nama,email,password)
-        values(:nama,:email,:password)";
-        $stmt = $db->prepare($sql);
-        $params = array(
-            ":nama" => $nama,
-            ":email" => $email,
-            ":password" => $password
-
-        );
-        $saved = $stmt->execute($params);
-        if ($saved) {
-            header("location: login.php");
-        }
     }
 }
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -199,7 +190,7 @@ if (isset($_POST['submit'])) {
                     <div class="card-body">
                         <form action="" method="POST">
                             <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Nama Anda" required>
+                                <input type="text" class="form-control form-control-user" id="name" name="nama" placeholder="Nama Anda" required>
                             </div></br>
                             <div class="card-group">
                                 <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email Anda" require>
