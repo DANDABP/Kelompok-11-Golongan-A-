@@ -177,7 +177,7 @@
                                 <input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Nama Barang" value="<?= $data['nama']; ?>" required>
                             </div></br>
                             <div class="card-group">
-                                <input type="text" class="form-control form-control-user" id="harga" name="harga" placeholder="Harga Barang" value="Rp.<?= $data['harga']; ?>" require>
+                                <input type="text" class="form-control form-control-user" id="harga" name="harga" placeholder="Harga Barang" value="<?= $data['harga']; ?>" require>
                             </div></br>
                             <div class="card_group">
                                 <img src="image_view.php?id_barang=<?php echo $data['id_barang']; ?>" width="100" />
