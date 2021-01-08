@@ -160,7 +160,7 @@
                   <a class="delete" href="keranjang.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')" >Delete</a>
                   <a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="image_view.php?id_barang=<?php echo $cart[$i]->id_barang; ?>" alt="..." width="70"/></a>
                   <div class="media-body ml-3"><strong class="h6">
-                    <a class="reset-anchor animsition-link" href="produk kabel.html"><?php echo $cart[$i]->nama; ?></a></strong>
+                    <a class="reset-anchor animsition-link" href="#"><?php echo $cart[$i]->nama; ?></a></strong>
                   </div>
                 </div>
               </th>
