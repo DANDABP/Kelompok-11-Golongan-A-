@@ -82,6 +82,7 @@
         <h6>Nomor Handphone : <?php echo $nomor; ?></h6>
         <h6>Email : <?php echo $email; ?></h6>
         <h6>Metode Pembayaran : <?php echo $bayar; ?></h6>
+        <img class="card-img-top img-fluid" style="width: 300px" src="img/QR Code.jpeg" alt="">
         <h6>Metode Pengiriman : <?php echo $kirim; ?></h6>
         <h6>Total : <?php echo $total; ?></h6>
         <h6>Bukti Pembayaran</h6><br>

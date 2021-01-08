@@ -61,9 +61,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.php" class="list-group-item">Lampu</a>
-          <a href="kabel.php" class="list-group-item">Kabel</a>
+          <a href="#" class="list-group-item">Semua Kategori (Coming Soon)</a>
+          <a href="#" class="list-group-item">Lampu (Coming Soon)</a>
+          <a href="#" class="list-group-item">Kabel (Coming Soon)</a>
         </div>
 
       </div>
@@ -158,7 +158,7 @@
                 <div class="media align-items-center">
                   <?php $index; ?>
                   <a class="delete" href="keranjang.php?index=<?php echo $index; ?>" onclick="return confirm('Are you sure?')" >Delete</a>
-                  <a class="reset-anchor d-block animsition-link" href="produk kabel.html"><img src="image_view.php?id_barang=<?php echo $cart[$i]->id_barang; ?>" alt="..." width="70"/></a>
+                  <a class="reset-anchor d-block animsition-link" href="#"><img src="image_view.php?id_barang=<?php echo $cart[$i]->id_barang; ?>" alt="..." width="70"/></a>
                   <div class="media-body ml-3"><strong class="h6">
                     <a class="reset-anchor animsition-link" href="#"><?php echo $cart[$i]->nama; ?></a></strong>
                   </div>

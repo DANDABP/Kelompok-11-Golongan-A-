@@ -62,9 +62,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.php" class="list-group-item">Lampu</a>
-          <a href="kabel.php" class="list-group-item">Kabel</a>
+          <a href="#" class="list-group-item">Semua Kategori (Coming Soon)</a>
+          <a href="#" class="list-group-item">Lampu (Coming Soon)</a>
+          <a href="#" class="list-group-item">Kabel (Coming Soon)</a>
         </div>
 
       </div>
@@ -83,17 +83,19 @@
 	<div class="card-body">
         1. Buka aplikasi LinkAja.
         <br>
-        2. Tap "Kirim Uang".
+        2. Tap Bayar yang memiliki ikon QR
         <br>
-        3. Lalu tap pilihan "Nomor Telepon".
+        3. Setelah pindah halaman, arahkan kamera ke kode QR.
         <br>
-        4. Selanjutnya isikan nomor telepon pembayaran Sinar Abadi, lalu tap "Konfirmasi".
+        4. Jika sudah, isikan nominal yang akan dibayarkan.
         <br>
-        5. Masukkan jumlah nominal uang yang akan dibayarkan, lalu tap tombol centang. 
+        5. Lalu tap konfirmasi.
         <br>
-        6. Jika jumlah dan nomor tujuan sudah benar, tap konfirmasi.
+        6. Masukkan pin anda untuk meneruskan konfirmasi.
         <br>
-        7. Bukti pembayaran harap ditangkap layar (screenshot), dan dikirimkan ke pihak admin Sinar Abadi agar dikonfirmasi.
+        7. Screenshot / tangkap layar bukti pembayaran.
+        <br>
+        8. Kirim bukti pembayaran berupa gambar.
     </div>
        
     <div class="card-header">
@@ -101,25 +103,45 @@
     </div>
 
     <div class="card-body">
-        1. Buka aplikasi ovo.
+        1. Buka aplikasi OVO.
         <br>
-        2. Klik menu Transfer yang ada di halaman depan.
+        2. Tap Scan.
         <br>
-        3. Masukkan nominal uang yang akan dibayarkan.
+        3. Arahkan kameran ke QR Code.
         <br>
-        4. Pilih transfer antar OVO.
+        4. Masukkan nominal yang akan dibayarkan.
         <br>
-        5. Masukkan nomor ponsel tujuan transfer, setelah itu tap transfer.
+        5. Tap bayar.
         <br>
-        6. Bukti pembayaran harap ditangkap layar (screenshot), dan dikirimkan ke pihak admin Sinar Abadi agar dikonfirmasi.
+        6. Masukkan pin anda.
+        <br>
+        7. Screenshot / tangkap layar bukti pembayaran.
+        <br>
+        8. Kirim bukti pembayaran berupa gambar.
     </div>
 
     <div class="card-header">
-            Tunai
+            ShopeePay
     </div>
 
     <div class="card-body">
-        Untuk pembayaran lewat tunai, bisa dibayarkan melalui drive ojek online yang telah dipesan oleh admin Sinar Abadi.
+        1. Tap halaman utama Shopee.
+        <br>
+        2. Tap bagian saldo ShopeePay.
+        <br>
+        3. Tap pilihan bayar, dan akan muncul halaman kamera.
+        <br>
+        4. Arahkan kameran ke QR Code pada pembayaran Sinar Abadi.
+        <br>
+        5. Jika sudah pindah halaman, isikan nominal yang akan dibayarakan, lalu tap lanjutkan.
+        <br>
+        6. Lalu tap bayar sekarang.
+        <br>
+        7. Masukkan pin ShopeePay anda, atau autentikasi sidik jari.
+        <br>
+        8. Screenshot / tangkap layar bukti pembayaran.
+        <br>
+        9. Kirim bukti pembayaran berupa gambar.
     </div>
 
         </div>

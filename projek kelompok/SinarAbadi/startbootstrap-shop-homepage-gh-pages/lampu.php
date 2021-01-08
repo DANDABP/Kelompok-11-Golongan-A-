@@ -29,10 +29,10 @@
         Sinar Abadi</a>
 
       <!-- Tombol Pencarian -->
-      <form>
+      <!-- <form>
         <input class="search" type="text" placeholder="Cari..." required>
         <input class="button" type="button" value="Cari">
-      </form>
+      </form> -->
 
       <!-- Navigasi Atas -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,9 +68,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.php" class="list-group-item">Lampu</a>
-          <a href="kabel.php" class="list-group-item">Kabel</a>
+          <a href="#" class="list-group-item">Semua Kategori (Coming Soon)</a>
+          <a href="#" class="list-group-item">Lampu (Coming Soon)</a>
+          <a href="#" class="list-group-item">Kabel (Coming Soon)</a>
         </div>
 
       </div>

@@ -33,13 +33,14 @@
       </a>
 
   <!--Tombol Pencarian-->
-        <form action="cari.php" method="get">
+       <!-- <form action="cari.php" method="get">
           <input class="search" name="search" type="text" placeholder="Cari produk atau merk" required>	
           <input class="button" type="submit" value="Cari">
         </form>
 
         <a class="keranjang" href="keranjang.php">
-          <img src="img/keranjang.PNG" width="35" height="35">
+          <img src="img/keranjang.PNG" width="35" height="35"> -->
+    
   <!--Navigasi Atas-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -74,9 +75,9 @@
 
         <h1 class="my-4">Sinar Abadi</h1>
         <div class="list-group">
-          <a href="index.php" class="list-group-item">Semua Kategori</a>
-          <a href="lampu.php" class="list-group-item">Lampu</a>
-          <a href="kabel.php" class="list-group-item">Kabel</a>
+          <a href="#" class="list-group-item">Semua Kategori (Coming Soon)</a>
+          <a href="#" class="list-group-item">Lampu (Coming Soon)</a>
+          <a href="#" class="list-group-item">Kabel (Coming Soon)</a>
         </div>
 
       </div>
