@@ -40,6 +40,9 @@
         <img src="img/Logo Sinar Abadi.png" width="25" height="40" alt="Sinar Abadi">
         Sinar Abadi</a>
 
+        <a class="keranjang" href="keranjang.php">
+                    <img src="img/keranjang.png" width="35" height="35">
+
   <!-- Navigasi Atas -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
