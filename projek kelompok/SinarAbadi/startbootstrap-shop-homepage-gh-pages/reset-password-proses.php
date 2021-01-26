@@ -7,8 +7,8 @@ $result = mysqli_query($koneksi, "select password from admin where email='$email
 $cek = mysqli_num_rows($querry);
 if ($cek > 0) {
   $pswrd = mysqli_fetch_row($result);
-  var_dump($pswrd);
-  // $hasil = implode($pswrd);
+  // var_dump($pswrd);
+  $hasil = implode($pswrd);
 
 ?>
   <script>
